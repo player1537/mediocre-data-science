@@ -3,7 +3,7 @@
 """
 
 from __future__ import annotations
-from {{ project }} import auto
+from {{ cookiecutter.project }} import auto
 
 
 def test_math() -> None:

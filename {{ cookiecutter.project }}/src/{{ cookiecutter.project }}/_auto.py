@@ -16,8 +16,8 @@ class AutoImport:
     
     @property
     def self(auto):
-        import {{ project }}
-        return {{ project }}
+        import {{ cookiecutter.project }}
+        return {{ cookiecutter.project }}
 
     @property
     def numpy(auto):
