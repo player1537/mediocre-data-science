@@ -11,16 +11,17 @@ auto.dotenv.load_dotenv()
 
 config = auto.types.SimpleNamespace()
 
-config.rootdir = auto.pathlib.Path(auto.os.environ['{{ PROJECT }}_ROOTDIR'])
+config.rootdir = auto.pathlib.Path(auto.os.environ['{{ cookiecutter.PROJECT }}_ROOTDIR'])
 assert config.rootdir.exists(), config.rootdir
+
 config.datadir = auto.pathlib.Path(auto.os.environ.get(
-    '{{ PROJECT }}_DATADIR',
+    '{{ cookiecutter.PROJECT }}_DATADIR',
     config.rootdir / 'data',
 ))
 assert config.datadir.exists(), config.datadir
 
 config.tempdir = auto.pathlib.Path(auto.os.environ.get(
-    '{{ PROJECT }}_TEMPDIR',
+    '{{ cookiecutter.PROJECT }}_TEMPDIR',
     config.rootdir / 'temp',
 ))
 assert config.tempdir.exists(), config.tempdir
