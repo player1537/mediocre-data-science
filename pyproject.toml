@@ -1,0 +1,39 @@
+[project]
+name = {{ project |jsonify }}
+version = "0.1.0"
+dependencies = [
+    "python-dotenv==1.0.1",
+    "numpy==2.2.2",
+    "pandas==2.2.3",
+    "sqlalchemy==2.0.37",
+    "jinja2==3.1.5",
+    "sqlean.py==3.47.0",
+    "scikit-learn==1.6.1",
+]
+requires-python = ">=3.13,<3.14"
+classifiers = ["Private :: Do Not Upload"]
+
+[project.optional-dependencies]
+test = [
+    "pytest==8.3.4",
+]
+dev = [
+    "openpyxl==3.1.5",
+    "tqdm==4.67.1",
+    "requests==2.32.3",
+    "beautifulsoup4==4.13.0",
+    "lxml[html_clean]==5.3.0",
+    "matplotlib==3.10.0",
+    "tabulate==0.9.0",
+    "ipywidgets==8.1.5",
+    "papermill==2.6.0",
+    "jupytext==1.16.6",
+    "ipykernel==6.29.5",
+    "nbconvert==7.16.6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

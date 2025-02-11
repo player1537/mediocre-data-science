@@ -1,0 +1,19 @@
+__pycache__
+/.env
+*.egg-info
+/venv
+/data
+/temp
+.aider*
+.env
+/.pytest_cache
+/.venv
+
+# XXX(th/4Y594WM9P0): I don't like dealing with uv.lock files because I don't
+# really understand the purpose of them, and often I'm worried that I'm causing
+# instability for others when they do get committed. To be safe, I'm going to
+# ignore them.
+uv.lock
+
+# XXX(th/4Y5ACGTJG0): Ditto package-lock.json
+package-lock.json
