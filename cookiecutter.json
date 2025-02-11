@@ -2,8 +2,8 @@
     "project": "my_project",
     "PROJECT": "{{ cookiecutter.project.upper() }}",
     "_copy_without_render": [
-        "{{ cookiecutter.project }}/src/{{ cookiecutter.project }}/lib/*.py",
-        "{{ cookiecutter.project }}/src/{{ cookiecutter.project }}/app/*.py",
-        "{{ cookiecutter.project }}/src/{{ cookiecutter.project }}/app/a/*.py"
+        "src/{{ cookiecutter.project }}/lib/*.py",
+        "src/{{ cookiecutter.project }}/app/*.py",
+        "src/{{ cookiecutter.project }}/app/a/*.py"
     ]
 }
